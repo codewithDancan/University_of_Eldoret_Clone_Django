@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login -UOE</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="icon" href="{% static 'images/uoe_logo_2.jpg' %}">
+  </head>
+  <body>
+    <form action="" method="POST">
+      {% csrf_token %}
+      <div class="class-login">
+        <div>
+        <style>
+        h5{
+          color: blue;
+          text-align: left;
+          font-family: 'Poppins', sans-serif;
+          background-color: blue;
+        }
+      </style>
+        {%  for message in messages %}
+        {{message}}
+        {% endfor %}
+      </div>
+        <img src="{% static 'images/uoe_logo_2.jpg' %} "alt="">
+        <div>
+        <h2>Welcome</h2>
+        <p>To login enter your student Admission Number <br> or Employee Number and Password</p>
+        <label for="username">Username</label>
+        <input type="text" name='username' placeholder="Enter Student No./Employee NO.">
+        <label for="password">Password</label>
+        <input type="password" name='password' placeholder="Enter password">
+        <br>
+        <input class="submit-btn" type="submit" value= 'Login'>
+        <br>
+        <a href="{% url 'reset' %}" class="btn forgot-password">Forgot Password?</a> or 
+        <a href="{% url 'signup' %}" class="btn forgot-password">Create an account</a>
+      </div>
+    </form>
+      <div class="footer">
+        <br>
+        <footer>
+          <p>Powered by CodewithDancan International Limited</p>
+        </footer>
+      </div>
+  </body>
+</html>

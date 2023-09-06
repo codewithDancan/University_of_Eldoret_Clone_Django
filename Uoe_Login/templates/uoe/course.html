@@ -1,0 +1,241 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Our Courses-UOE</title>
+        <link rel="icon" href="{% static 'images/uoe_logo_2.jpg' %}">
+        <link rel="stylesheet" href="{% static 'css/uoe.css' %}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Font1&family=Font2&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+        <script src="https://kit.fontawesome.com/46e6ebb4cd.js"
+            crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <!--home section-->
+        <section class="sub-header" style="background-image: url('{% static 'images/gown.jpeg' %}');">
+
+
+            <nav>
+                <a href="uoe.html"><img src='{% static "images/uoe_logo.jpg" %}'></a>
+                <div class="nav-links" id="navLinks">
+
+                    <i class="fa fa-window-close" aria-hidden="true"
+                        onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="{% url 'home' %}">Home</a></li>
+                        <li><a href="{% url 'about' %}">About</a></li>
+                        <li><a href="{% url 'course' %}">Course</a></li>
+                        <li><a href="{% url 'blog' %}">Blog</a></li>
+                        <li><a href="{% url 'contact' %}">Contact</a></li>
+                    </ul>
+
+                </div>
+                <i class="fa fa-bars" aria-hidden="true" onclick="showMenu()"></i>
+            </nav>
+            <h1>Our Courses</h1>
+        </section>
+
+        <!-------- course------ -->
+        <section class="course">
+            <h1>Courses We Offer</h1>
+            <h2>Welcome to university of Eldoret <h2>
+                    <h3> We Offer The Following Courses </h3>
+
+                    <div class="row">
+                        <div class="course-col">
+                            <h3>Diploma</h3>
+                            <p> At the University of Eldoret, we are committed
+                                to
+                                academic excellence and fostering a supportive
+                                learning environment. <br>
+                                Our experienced faculty members are passionate
+                                about
+                                teaching and mentoring students, <br>
+                                ensuring that they receive a well-rounded
+                                education
+                                that prepares them for their professional
+                                careers.
+                                <br>
+                                Our diploma programs cover various disciplines,
+                                including business administration, <br>
+                                information technology, agriculture, nursing,
+                                and
+                                more.
+                            </p>
+                        </div>
+
+                        <div class="course-col">
+                            <h3>Bachelors' Degree</h3>
+                            <p>Welcome to the University of Eldoret, where
+                                academic
+                                excellence meets limitless possibilities! <br>
+                                Our Bachelor's Degree programs cover a wide
+                                array of
+                                fields, <br>
+                                including but not limited to Business
+                                Administration, Computer Science, Education,
+                                Engineering, <br>
+                                Health Sciences, Social Sciences, and many more.
+                                <br>
+                                These programs are carefully crafted to meet the
+                                evolving demands of the job market, <br>
+                                ensuring that our graduates are prepared to
+                                excel in
+                                their careers.</p>
+                        </div>
+
+                        <div class="course-col">
+                            <h3>Post Graduation</h3>
+                            <p>Welcome to the University of Eldoret, your
+                                gateway to
+                                higher education and academic excellence! <br>
+                                We are proud to offer a wide range of
+                                postgraduate
+                                programs designed to shape tomorrow's leaders
+                                and
+                                innovators. <br>
+                                At our esteemed institution, you will find a
+                                nurturing environment that fosters intellectual
+                                growth, <br>
+                                critical thinking, and professional development.</p>
+                        </div>
+                    </div>
+                </section>
+
+                 <!--Facilities section -->
+                 <section class="facilities">
+                    <h1>Our Facilities</h1>
+                    <p>The University of Eldoret offers a wide range of modern
+                        facilities <br>
+                        to enhance the learning and overall experience of its
+                        students. <br>
+                        The campus boasts state-of-the-art laboratories equipped
+                        with the latest technology, <br>
+                        providing students with hands-on experience in their
+                        respective fields of study.
+                        For students interested in sports and physical
+                        activities, the university provides excellent sporting
+                        facilities, <br>
+                        including well-maintained fields and courts for
+                        football, basketball, volleyball, and more. <br>
+                        These facilities encourage a healthy and active
+                        lifestyle among students, fostering teamwork and a sense
+                        of camaraderie.
+                        In addition, the University of Eldoret offers a
+                        well-stocked library that serves as a valuable resource
+                        for research and study. <br>
+                        With a vast collection of books, journals, and online
+                        databases, students have access to a wealth of
+                        information to support their academic pursuits.
+                        Furthermore, the university campus provides comfortable
+                        and modern residential facilities for students who
+                        prefer to live on-site. <br>
+                        The accommodation options are designed to create a
+                        conducive living environment, <br>
+                        promoting a sense of community and facilitating easy
+                        access to campus facilities.</p>
+
+                    <div class="row">
+                        <div class="facilities-col">
+                            <img src='{% static "images/uoe_library.jpg" %}' alt>
+                            <h2>OUR LIBRARY</h2>
+                            <p>Welcome to the University of Eldoret Library, <br>
+                                a hub of knowledge and learning that serves as
+                                the academic heartbeat of our institution. <br>
+                                Our library is a vibrant space dedicated to
+                                supporting the educational and research needs of
+                                our students, faculty, and staff.</p>
+                        </div>
+
+                        <div class="facilities-col">
+                            <img src='{% static  "images/uoe_hostels.jpg" %}' alt>
+                            <h2>ACCOMODATION</h2>
+                            <p>Our student residences are designed to cater to
+                                the diverse needs and preferences of our
+                                students. <br>
+                                Each room is furnished with essential amenities,
+                                including study desks, <br>
+                                comfortable beds, and storage spaces, ensuring a
+                                conducive environment for academic pursuits. <br>
+                                We prioritize safety and security, with
+                                dedicated security personnel and surveillance
+                                <br>
+                                systems in place to ensure the well-being of our
+                                residents.</p>
+                        </div>
+
+                        <div class="facilities-col">
+                            <img src='{% static "images/uoe_playground.jpeg" %}' alt>
+                            <h2>PLAYGROUNDS</h2>
+                            <p>Our playgrounds offer a variety of amenities and
+                                facilities designed to cater to the diverse
+                                interests of our students. <br>
+                                From open fields for sports like football,
+                                rugby, and athletics, to courts for basketball,
+                                <br>
+                                volleyball, and tennis, there are plenty of
+                                options to engage in physical activities and
+                                team sports.</p>
+                        </div>
+
+                        <div class="facilities-col">
+                            <img src= '{% static "images/uoe_complab.jpeg" %}' alt>
+                            <h2>E-LEARNING</h2>
+                            <p>The University of Eldoret's e-learning platform
+                                provides students with the opportunity to access
+                                course materials, <br>
+                                participate in virtual lectures, and submit
+                                assignments at their own pace, <br>
+                                accommodating diverse learning styles and
+                                personal schedules. <br>
+                                This flexibility allows students to balance
+                                their studies with work, family commitments, or
+                                other responsibilities.</p>
+                        </div>
+                    </div>
+
+                </section>
+
+
+        <!-------- footer------- -->
+        <section class="footer">
+            <h1>About Us</h1>
+            <p> "Our Mission " <br> The University of Eldoret is
+                committed to providing accessible and quality education,
+                <br>
+                fostering research and innovation, and nurturing ethical
+                leaders who contribute to the development of society.</p>
+            <div class="icons">
+                <i class="fa fa-facebook"></i>
+                <i class="fa fa-twitter"></i>
+                <i class="fa fa-instagram"></i>
+                <i class="fa fa-linkedin"></i>
+            </div>
+            <p>Made With <i class="fa fa-heart-o"></i> CodeWithDuncan</p>
+
+        </section>
+
+        <!--   --------javascript toggle menu-------->
+        <script>
+
+            var navLinks = document.getElementById('navLinks');
+
+            function showMenu() {
+                navLinks.style.right = "0";
+            }
+
+            function hideMenu() {
+                navLinks.style.right = "-200px";
+            }
+        </script>
+
+    </body>
+</html>

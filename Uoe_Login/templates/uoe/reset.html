@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forgot Password-UOE</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="icon" href="{% static 'images/uoe_logo_2.jpg' %}">
+  </head>
+  <body>
+      <div class="class-login">
+        <img src="{% static 'images/uoe_logo_2.jpg' %} "alt="">
+      <form method="POST">
+        {% csrf_token %}
+        <h2>Recover Password for {{user.username}}</h2>
+        <!--<p>A reset link will be sent to your Email</p>-->
+        
+        {% for m in messages %}
+        <p style='color:red;'>{{m}}</p>
+        {% endfor %}
+          
+        <!--<label for="username">Username</label>
+        <input type="text" name='username' placeholder="Enter Student No./Employee NO.">-->
+        <label for="email">Email</label>
+        <input type="email" name='email' placeholder='Enter your email'>
+        <input href='#'  class="submit-btn" type="submit" value= 'Reset Password'>
+    </form>
+        <br>
+        <a href="{% url 'signin' %}" class="btn forgot-password">Return to Login</a> 
+      </div>
+      <div class="footer">
+        <br>
+        <footer>
+          <p>Powered by CodewithDancan International Limited</p>
+        </footer>
+      </div>
+  </body>
+</html>

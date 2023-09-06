@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register -UOE</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="icon" href="{% static 'images/uoe_logo_2.jpg' %}">
+  </head>
+  <body>
+    <form method="POST">
+      {% csrf_token %}
+      <div class="class-login">
+        <div>
+          <style>
+            h5{
+              color: blue;
+              text-align: left;
+              font-family: 'Poppins', sans-serif;
+            }
+          </style>
+          {% for message in messages %}
+          {{message}}
+          {% endfor %}
+        </div>
+        <img src="{% static 'images/uoe_logo_2.jpg' %} "alt="">
+        <h2>Account Registration</h2>
+        <p>To register an account, Fill in the form bellow:</p>
+        <label for="username">Username</label>
+        <input type="text" name='username' placeholder="Enter Student No./Employee NO.">
+        <label for="email">Email</label>
+        <input type="email" name='email' placeholder="Enter your email">
+        <label for="password">Password</label>
+        <input type="password" name='password' placeholder="Enter password">
+        <label for="password">Confirm Password</label>
+        <input type="password" name='password2' placeholder="Repeat password">
+        <input class="submit-btn" type="submit" value= 'Sign Up'>
+  
+        <br>
+        <a href="{% url 'signin' %}" class="btn forgot-password">Return to Login</a> 
+        </div>
+    </form>
+      <div class="footer">
+        <br>
+        <footer>
+          <p>Powered by CodewithDancan International Limited</p>
+        </footer>
+      </div>
+  </body>
+</html>

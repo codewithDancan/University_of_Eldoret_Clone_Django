@@ -1,0 +1,102 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About Us-UOE</title>
+        <link rel="icon" href="{% static 'images/uoe_logo_2.jpg' %}">
+        <link rel="stylesheet" href="{% static 'css/uoe.css' %}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Font1&family=Font2&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+        <script src="https://kit.fontawesome.com/46e6ebb4cd.js"
+            crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <!--home section-->
+        <section class="sub-header" style="background-image: url('{% static 'images/uoe_admission.jpg' %}');">
+
+            <nav>
+                <a href="uoe.html"><img src='{% static "images/uoe_logo.jpg" %}'></a>
+                <div class="nav-links" id="navLinks">
+
+                    <i class="fa fa-window-close" aria-hidden="true"
+                        onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="{% url 'home' %}">Home</a></li>
+                        <li><a href="{% url 'about' %}">About</a></li>
+                        <li><a href="{% url 'course' %}">Course</a></li>
+                        <li><a href="{% url 'blog' %}">Blog</a></li>
+                        <li><a href="{% url 'contact' %}">Contact</a></li>
+                    </ul>
+                    
+                </div>
+                <i class="fa fa-bars" aria-hidden="true" onclick="showMenu()"></i>
+            </nav>
+            <h1>About Us</h1>
+        </section>
+
+
+        <!-----------about us section ------------->
+        <section class="about-us">
+            <div class="row">
+                <div class="about-col">
+                    <h1>Kenya's Largest University</h1>
+                    <p>At the University of Eldoret, <br>
+                        we are dedicated to providing quality education and
+                        empowering our students to become future leaders in
+                        their fields. <br>
+                        Established in [year], our institution has grown to
+                        become one of the leading universities in Kenya, <br>
+                        known for its academic excellence, research
+                        contributions, and community engagement.</p>
+
+                        <a href="#" class="hero-btn">EXPLORE MORE</a>
+                </div>
+                <div class="about-col">
+                    <img src='{% static "images/uoe_staff.jpg" %}' alt="">
+
+                </div>
+            </div>
+        </section>
+
+        <!-------- footer------- -->
+        <section class="footer">
+            <h1>About Us</h1>
+            <p> "Our Mission " <br> The University of Eldoret is
+                committed to providing accessible and quality education,
+                <br>
+                fostering research and innovation, and nurturing ethical
+                leaders who contribute to the development of society.</p>
+            <div class="icons">
+                <i class="fa fa-facebook"></i>
+                <i class="fa fa-twitter"></i>
+                <i class="fa fa-instagram"></i>
+                <i class="fa fa-linkedin"></i>
+            </div>
+            <p>Made With <i class="fa fa-heart-o"></i> CodeWithDuncan</p>
+
+        </section>
+
+        <!--   --------javascript toggle menu-------->
+        <script>
+
+            var navLinks = document.getElementById('navLinks');
+
+            function showMenu() {
+                navLinks.style.right = "0";
+            }
+
+            function hideMenu() {
+                navLinks.style.right = "-200px";
+            }
+        </script>
+
+    </body>
+</html>

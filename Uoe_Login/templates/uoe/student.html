@@ -1,0 +1,130 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student's Portal -UOE</title>
+    <!--custom css -->
+    <link rel="icon" href="{% static 'images/uoe_logo_2.jpg' %}">
+    <link rel="stylesheet" href="{% static 'css/student.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+    <!--open sans font-->
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100;300;700;800&family=Open+Sans&family=Poppins:ital,wght@0,100;1,100&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="grid-container">
+        <!--header-->
+        <header class="header">
+            <div class="main-title">
+                <h2>UNIVERSITY OF ELDORET</h2>
+            </div>
+            <div class="menu-icon" onclick="openSidebar()">
+                <span class="material-icons-outlined">menu</span>
+            </div>
+            <div class="header-right">
+                <span class="material-icons-outlined">notifications</span>
+                <span class="material-icons-outlined">email</span>
+                <span class="material-icons-outlined">account_circle</span>
+            </div>
+        </header>
+        <!--End header-->
+        <!--Side bar -->
+        <aside id="sidebar">
+            <div class="sidebar-title">
+                <div class="sidebar-brand">
+                    <img src="{% static 'images/uoe_logo_2.jpg' %} "alt="">
+
+                </div>
+                <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
+
+            </div>
+            <ul class="sidebar-list">
+                <li class="sidebar-list-item">
+                    <a href="#">
+                        <span class="material-icons-outlined">dashboard</span> Dashboard
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="#">
+                        <span class="material-icons-outlined">leaderboard</span> Social
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="#">
+                        <span class="material-icons-outlined">forum</span> Message
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="#">
+                        <span class="material-icons-outlined">phone</span> Admission
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="#">
+                        <span class="material-icons-outlined">email</span> Academic
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="#">
+                        <span class="material-icons-outlined">poll</span> Repository
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="#">
+                        <span class="material-icons-outlined">settings</span> Financials
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="#">
+                        <span class="material-icons-outlined">settings</span> Timetable
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="#">
+                        <span class="material-icons-outlined">settings</span> Evaluations
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="#">
+                        <span class="material-icons-outlined">settings</span> FAQs
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="#">
+                        <span class="material-icons-outlined">settings</span> Virtual Assistant
+                </li>
+                <p style="color: aliceblue; text-align: center; text-decoration: none;">Powered by <br> CodewithDancan Ltd</p>
+            </ul>
+        </aside>
+        <!--End side bar -->
+        <!--main-->
+        <main class="main-container">
+            <div class="main-title">
+                <h4>Dashboard</h4>
+            </div>
+            <div class="products">
+                <div class="product-card">
+                    <h2 class="product-description">Welcome back {{user.username}}</h2>
+                    <p class="text-secondary">We are delighted to have you need help on<br>
+                    system walkthrough navigate to Virtual <br> Assiastant on th e side menu</p>
+                   <!--<button type="button" class="product-button"><span class="material-icons-outlined">add</span></button>--> 
+                </div>
+
+            
+                <div class="card-body">
+                    <h5>Fees Balance</h5>
+                        <hr />
+                    <h4 class="text-center">21,900.00</h4> 
+                </div>
+         
+    </div>
+    </main>
+    <!--endmain-->
+    </div>
+
+    <!--custom js -->
+    <script src='{% static "js/scripts.js" %}'></script>
+</body>
+
+</html>
